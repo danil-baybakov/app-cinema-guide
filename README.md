@@ -27,6 +27,6 @@
 -   локальный запуск приложения в режиме продакшен:
     -   ```bush
         npm install --global serve
-        npm serve ./dist
+        serve ./dist
         ```
     -   открыть страницу приложения <http://localhost:3000/>
