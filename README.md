@@ -1,1 +1,1 @@
-# App cinema guide
+# App Cinema Guide
