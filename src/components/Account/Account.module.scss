@@ -1,0 +1,49 @@
+.account {
+    &__container {
+        padding-top: 162px;
+        padding-bottom: 160px;
+    }
+
+    &__title {
+        margin-bottom: 72px;
+        font-family: var(--font-bold);
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    &__list {
+        display: flex;
+        margin-bottom: 76px;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 61px;
+    }
+}
+
+//**************************************//
+//************  576 *******************//
+//**************************************//
+@media (max-width: 576px) {
+    .account {
+        &__container {
+            padding-top: 82px;
+            padding-bottom: 71px;
+        }
+
+        &__title {
+            margin-bottom: 38px;
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        &__item:not(:last-child) {
+            margin-right: 19px;
+        }
+
+        &__list {
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+    }
+}

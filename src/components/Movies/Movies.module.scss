@@ -1,0 +1,123 @@
+.movies {
+    &__container {
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 64px;
+
+        &-icon {
+            display: block;
+            line-height: 0;
+            fill: var(--content-primary);
+            width: 40px;
+            height: 40px;
+        }
+
+        &-text {
+            font-family: var(--font-bold);
+            font-size: 48px;
+            line-height: 56px;
+        }
+
+        &-item:not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 224px);
+        justify-content: center;
+        column-gap: 40px;
+        row-gap: 64px;
+        margin-bottom: 64px;
+
+        &-wrapper {
+            overflow: visible;
+        }
+    }
+
+    &__btn {
+        &-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+            &.none {
+                display: none;
+            }
+        }
+    }
+}
+
+//**************************************//
+//************  576 *******************//
+//**************************************//
+@media (max-width: 576px) {
+    .movies {
+        &__container {
+            padding-top: 82px;
+            padding-bottom: 40px;
+        }
+
+        &__list {
+            grid-template-columns: 335px;
+            row-gap: 24px;
+        }
+
+        &__card {
+            width: 100%;
+            min-height: 502px;
+        }
+
+        &__title {
+            margin-bottom: 40px;
+
+            &-icon {
+                width: 32px;
+                height: 32px;
+            }
+
+            &-text {
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            &-item:not(:last-child) {
+                margin-right: 8px;
+            }
+        }
+
+        &__list {
+            margin-bottom: 40px;
+        }
+
+        &__item.mobil-none {
+            display: none;
+        }
+
+        &__btn {
+            width: 335px;
+        }
+    }
+}
+
+//**************************************//
+//************  375 *******************//
+//**************************************//
+@media (max-width: 375px) {
+    .movies {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+
+        &__btn {
+            width: 100%;
+        }
+    }
+}

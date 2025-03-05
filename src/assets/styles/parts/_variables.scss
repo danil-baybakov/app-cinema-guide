@@ -1,0 +1,46 @@
+:root {
+    // Color Background
+    --background-white: #ffffff;
+    --background-disabled: rgba(255, 255, 255, 0.5);
+    --background-black: #1e1e1e;
+    --background-secondary: #383a3c;
+    --background-brand-active: #6a5dc2;
+    --background-barnd-hovered: #8577e1;
+    --background-brand-disabled: #d6d2f1;
+    --background-black-disabled: #747474;
+
+    //Color Content
+    --content-primary: #ffffff;
+    --content-secondary: rgba(255, 255, 255, 0.7);
+    --content-disabled: rgba(255, 255, 255, 0.5);
+    --content-placeholder: rgba(0, 0, 0, 0.4);
+    --content-black: #000000;
+    --content-active: #b4a9ff;
+    --content-error: #ff7575;
+
+    //Color Rating
+    --rating-color-max: #308e21;
+    --rating-color-pre-max: #a59400;
+    --rating-color-pre-min: #777777;
+    --rating-color-min: #c82020;
+
+    //Color Btn
+    --btn-color-link-active: #dc5dfc;
+    --btn-background-secondary: #333333;
+    --btn-text-background-secondary: #393b3c;
+
+    //Font
+    --font-regular: "Play-Regular", sans-serif;
+    --font-bold: "Play-Bold", sans-serif;
+
+    //modal color
+    --modal-background: rgba(0, 0, 0, 0.5);
+
+    //video player color
+    --video-player-background: rgba(10, 11, 11, 0.9);
+    --video-player-title-background: rgba(10, 11, 11, 0.5);
+
+    //movie-card
+    --movie-card-outline: rgba(255, 255, 255, 0.25);
+    --movie-card-box-shadow: 0px 0px 80px 0px rgba(255, 255, 255, 0.33);
+}

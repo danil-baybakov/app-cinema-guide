@@ -1,0 +1,226 @@
+.modal {
+    position: fixed;
+    z-index: 20000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--modal-background);
+
+    &__container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 420px;
+        padding: 64px 40px;
+        border-radius: 24px;
+        background-color: var(--background-white);
+
+        &::after {
+            display: none;
+            content: "";
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 24px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    &__close {
+        display: block;
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        border-radius: 24px;
+        border: none;
+        top: 0;
+        right: calc(-24px - 48px);
+
+        &::after {
+            display: none;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 24px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    &__logo {
+        width: 180px;
+        height: 24px;
+        margin-bottom: 43px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__title {
+        font-family: var(--font-bold);
+        font-size: 24px;
+        line-height: 32px;
+        color: var(--content-black);
+        margin-bottom: 21px;
+    }
+
+    &__list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    &__item {
+        min-height: 56px;
+    }
+
+    &__btn {
+        width: 100%;
+        margin-bottom: 24px;
+
+        &.desktop-mb-32 {
+            margin-bottom: 32px;
+        }
+
+        &.mb-0 {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        outline: none;
+        display: block;
+        font-family: var(--font-bold);
+        font-size: 18px;
+        line-height: 24px;
+        color: var(--content-black);
+        transition: color 0.3s ease-in-out;
+
+        &:focus {
+            color: var(--background-brand-active);
+        }
+
+        &:hover {
+            color: var(--background-brand-active);
+        }
+
+        &:active {
+            color: var(--background-brand-active);
+        }
+    }
+
+    &__info {
+        font-family: var(--font-regular);
+        font-size: 18px;
+        line-height: 24px;
+        color: var(--content-black);
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    &__error {
+        font-family: var(--font-bold);
+        font-weight: 700;
+        color: var(--content-error);
+        font-size: 0.8rem;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    &.disable {
+        .modal {
+            &__container {
+                &::after {
+                    display: block;
+                }
+            }
+
+            &__close {
+                &::after {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__loader {
+        position: absolute;
+        z-index: 50000;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+//**************************************//
+//************  1200 *******************//
+//**************************************//
+@media (max-width: 768px) {
+    .modal {
+        &__container {
+            padding: 64px 20px 32px;
+            width: 335px;
+        }
+
+        &__close {
+            top: 8px;
+            right: 8px;
+        }
+
+        &__logo {
+            margin-bottom: 33px;
+        }
+
+        &__title {
+            margin-bottom: 23px;
+        }
+
+        &__link {
+            margin-bottom: 0;
+        }
+
+        &__btn {
+            &.desktop-mb-32 {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+//**************************************//
+//************  375 *******************//
+//**************************************//
+@media (max-width: 375px) {
+    .modal {
+        &__container {
+            width: calc(100% - 40px);
+        }
+    }
+}

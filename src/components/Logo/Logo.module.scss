@@ -1,0 +1,49 @@
+.logo {
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		transition: opacity .3s ease-in-out;
+	}
+
+	&__link {
+		position: absolute;
+		outline: none;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	&__link::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		outline-offset: 5px;
+		border-radius: 2px;
+		outline: 1px solid transparent;
+		transition: outline-color .3s ease-in-out;
+	}
+
+	&__link:focus {
+		&::after {
+			outline-color: var(--btn-color-link-active);
+		}
+	}
+
+	&:hover .logo__img {
+		opacity: .5;
+	}
+
+}
+
+//**************************************//
+//************  1200 *******************//
+//**************************************//
+@media (max-width: 1200px) {}

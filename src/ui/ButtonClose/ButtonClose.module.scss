@@ -1,0 +1,54 @@
+.button-close {
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+
+    position: relative;
+    width: inherit;
+    height: inherit;
+    min-width: 24px;
+    min-height: 24px;
+    border-radius: inherit;
+    background-color: var(--content-primary);
+
+    &__svg {
+        position: absolute;
+        display: block;
+        line-height: 0;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 24px;
+        height: 24px;
+        fill: var(--content-black);
+        transition: fill 0.3s ease-in-out;
+    }
+
+    &:focus {
+        .button-close {
+            &__svg {
+                fill: var(--background-brand-active);
+            }
+        }
+    }
+
+    &:hover {
+        .button-close {
+            &__svg {
+                fill: var(--background-brand-active);
+            }
+        }
+    }
+    &:active {
+        .button-close {
+            &__svg {
+                fill: var(--background-brand-active);
+            }
+        }
+    }
+}

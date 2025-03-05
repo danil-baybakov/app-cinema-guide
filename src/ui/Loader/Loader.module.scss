@@ -1,0 +1,23 @@
+.loader {
+    &__icon {
+        display: block;
+        z-index: 50000;
+        line-height: 1;
+        fill: var(--content-primary);
+        animation: rotate 2s linear infinite;
+    }
+
+    &.secondary {
+        .loader {
+            &__icon {
+                fill: var(--background-secondary);
+            }
+        }
+    }
+
+    @keyframes rotate {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}

@@ -1,0 +1,25 @@
+// /* подключение шрифтов */
+// Play-Regular
+@font-face {
+    font-family: "Play";
+    src: local("Play-Regular"),
+        url("../../fonts/Play-Bold.woff2") format("woff2"),
+        url("../../fonts/Play/Play-Regular.woff") format("woff"),
+        url("../../fonts/Play/Play-Regular.ttf") format("truetype"),
+        url("../../fonts/Play/Play-Regular.eot") format("eot");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+// Play-Bold
+@font-face {
+    font-family: "Play";
+    src: local("Play-Bold"), url("../../fonts/Play-Bold.woff") format("woff2"),
+        url("../../fonts/Play/Play-Bold.woff") format("woff"),
+        url("../../fonts/Play/Play-Bold.ttf") format("truetype"),
+        url("../../fonts/Play/Play-Bold.eot") format("eot");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}

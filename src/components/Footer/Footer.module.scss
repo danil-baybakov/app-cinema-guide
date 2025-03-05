@@ -1,0 +1,110 @@
+.footer {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    &__copyright {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-right: 24px;
+
+        &-item:not(:last-child) {
+            margin-right: 12px;
+        }
+
+        &-title {
+            font-family: var(--font-bold);
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        &-text {
+            display: flex;
+            align-items: center;
+            color: var(--content-secondary);
+            font-size: 18px;
+            line-height: 24px;
+
+            &-item:not(:last-child) {
+                margin-right: 12px;
+            }
+        }
+
+        &-icon {
+            display: block;
+            line-height: 0;
+            width: 24px;
+            height: 24px;
+            fill: var(--content-secondary);
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+
+        &-item:not(:last-child) {
+            margin-right: 24px;
+        }
+    }
+}
+
+//**************************************//
+//************  768 *******************//
+//**************************************//
+@media (max-width: 768px) {
+    .footer {
+        &__container {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        &__copyright {
+            max-width: 300px;
+            margin-right: 0;
+            margin-bottom: 32px;
+
+            &-item:not(:last-child) {
+                margin-right: 0;
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+
+//**************************************//
+//************  576 *******************//
+//**************************************//
+@media (max-width: 576px) {
+    .footer {
+        &__container {
+            padding-top: 22px;
+            padding-bottom: 7px;
+        }
+
+        &__copyright {
+            &-text {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            &-icon {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        &__social {
+            flex-wrap: wrap;
+
+            &-item {
+                margin-bottom: 24px;
+            }
+        }
+    }
+}

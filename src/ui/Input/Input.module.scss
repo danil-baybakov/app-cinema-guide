@@ -1,0 +1,192 @@
+.input {
+    position: relative;
+    width: 100%;
+    min-height: inherit;
+
+    &__wrapper {
+        position: relative;
+        width: 100%;
+        min-height: inherit;
+    }
+
+    &__field {
+        border: none;
+        padding: 0;
+        margin: 0;
+        line-height: 0;
+        background-image: none;
+        background-color: transparent;
+        outline: none;
+        box-shadow: none;
+        min-width: 0;
+
+        width: 100%;
+        min-height: inherit;
+        padding: 12px 52px;
+        border-radius: 8px;
+        font-size: 18px;
+        line-height: 24px;
+        outline: 1px solid transparent;
+        color: var(--content-primary);
+        background-color: var(--background-secondary);
+        transition: outline-color 0.3s ease-in-out;
+
+        &:focus {
+            outline-color: var(--content-active);
+
+            & + .input__icon {
+                .input__svg {
+                    fill: var(--content-active);
+                }
+            }
+        }
+
+        &:hover {
+            outline-color: var(--content-active);
+
+            & + .input__icon {
+                .input__svg {
+                    fill: var(--content-active);
+                }
+            }
+        }
+
+        &:active {
+            outline-color: var(--content-active);
+
+            & + .input__icon {
+                .input__svg {
+                    fill: var(--content-active);
+                }
+            }
+        }
+
+        &:not(:placeholder-shown),
+        &:-webkit-autofill {
+            outline-color: var(--content-primary);
+
+            & + .input__icon {
+                .input__svg {
+                    fill: var(--content-primary);
+                }
+            }
+        }
+
+        &::placeholder {
+            color: var(--content-disabled);
+        }
+    }
+
+    &.mh-48 {
+        min-height: 48px;
+    }
+
+    &__icon {
+        padding: 0;
+        margin: 0;
+
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 16px;
+    }
+
+    &__svg {
+        display: block;
+        width: 24px;
+        height: 24px;
+        line-height: 0;
+        fill: var(--content-disabled);
+        transition: fill 0.3s ease-in-out;
+    }
+
+    &__error {
+        display: none;
+        padding: 0;
+        margin: 0;
+        left: 16px;
+        bottom: 0;
+        font-family: var(--font-bold);
+        font-weight: 700;
+        color: var(--content-error);
+        font-size: 0.8rem;
+    }
+
+    &.light {
+        .input {
+            &__field {
+                background-color: var(--background-white);
+                outline: 1px solid var(--content-placeholder);
+                color: var(--content-black);
+
+                &:focus {
+                    outline-color: var(--content-active);
+
+                    & + .input__icon {
+                        .input__svg {
+                            fill: var(--content-active);
+                        }
+                    }
+                }
+
+                &:hover {
+                    outline-color: var(--content-active);
+
+                    & + .input__icon {
+                        .input__svg {
+                            fill: var(--content-active);
+                        }
+                    }
+                }
+
+                &:active {
+                    outline-color: var(--content-active);
+
+                    & + .input__icon {
+                        .input__svg {
+                            fill: var(--content-active);
+                        }
+                    }
+                }
+
+                &:not(:placeholder-shown),
+                &:-webkit-autofill {
+                    outline-color: var(--content-placeholder);
+
+                    & + .input__icon {
+                        .input__svg {
+                            fill: var(--content-placeholder);
+                        }
+                    }
+                }
+
+                &::placeholder {
+                    color: var(--content-placeholder);
+                }
+            }
+
+            &__svg {
+                fill: var(--content-placeholder);
+            }
+        }
+    }
+
+    &.error {
+        .input {
+            &__field {
+                margin-top: 2px;
+                outline-color: var(--content-error);
+
+                & + .input__icon {
+                    .input__svg {
+                        fill: var(--content-error);
+                    }
+                }
+            }
+
+            &__error {
+                display: block;
+            }
+        }
+    }
+}

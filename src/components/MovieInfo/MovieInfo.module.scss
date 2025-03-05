@@ -1,0 +1,102 @@
+.movie-info {
+    font-family: var(--font-regular);
+    font-size: 18px;
+    line-height: 24px;
+
+    &__container {
+        padding-top: 40px;
+        padding-bottom: 125px;
+    }
+
+    &__title {
+        margin-bottom: 64px;
+        font-family: var(--font-bold);
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+
+        &-name {
+            overflow: hidden;
+            min-width: 320px;
+            margin-right: 8px;
+
+            &-text {
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    left: calc(100% + 8px);
+                    content: "..................................................................................................................................";
+                }
+            }
+        }
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 27px;
+    }
+}
+
+//**************************************//
+//************  768 *******************//
+//**************************************//
+@media (max-width: 768px) {
+    .movie-info {
+        &__item {
+            &-name {
+                min-width: 200px;
+            }
+        }
+    }
+}
+
+//**************************************//
+//************  576 *******************//
+//**************************************//
+@media (max-width: 576px) {
+    .movie-info {
+        &__container {
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+
+        &__title {
+            margin-bottom: 40px;
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+
+            &-name {
+                min-width: auto;
+                margin-right: 0;
+                font-size: 14px;
+                line-height: 20px;
+                color: var(--content-disabled);
+                margin-bottom: 4px;
+
+                &-text {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &__item:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+}

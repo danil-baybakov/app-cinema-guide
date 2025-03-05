@@ -1,0 +1,42 @@
+.account-favorites {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 224px);
+        justify-content: center;
+        column-gap: 40px;
+        row-gap: 64px;
+        margin-bottom: 64px;
+
+        &-wrapper {
+            overflow: visible;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+//**************************************//
+//************  576 *******************//
+//**************************************//
+@media (max-width: 576px) {
+    .account-favorites {
+        &__list {
+            display: flex;
+            justify-content: flex-start;
+            column-gap: 0;
+            row-gap: 0;
+            margin-bottom: 0;
+        }
+
+        &__item {
+            width: auto;
+        }
+
+        &__btn {
+            display: none;
+        }
+    }
+}

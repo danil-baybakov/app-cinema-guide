@@ -1,0 +1,112 @@
+.button-icon {
+    display: block;
+    line-height: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 1px solid transparent;
+    padding: 16px 22px;
+    border-radius: 28px;
+    background-color: var(--btn-background-secondary);
+    appearance: none;
+    cursor: pointer;
+    transition: outline-color 0.3s ease-in-out;
+
+    &__wrapper {
+        position: relative;
+        display: block;
+        line-height: 0;
+        width: 24px;
+        height: 24px;
+    }
+
+    &__svg {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        line-height: 0;
+        fill: var(--content-primary);
+        transition: fill 0.3s ease-in-out;
+
+        &:last-child {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, fill 0.3s ease-in-out;
+        }
+    }
+
+    &:focus {
+        outline-color: var(--content-active);
+    }
+
+    &:hover {
+        .button-icon {
+            &__svg {
+                &:first-child {
+                    fill: var(--content-active);
+                }
+            }
+        }
+    }
+
+    &:active {
+        .button-icon {
+            &__svg {
+                &:first-child {
+                    fill: var(--content-active);
+                }
+            }
+        }
+    }
+
+    &.active {
+        .button-icon {
+            &__svg {
+                fill: var(--content-active);
+
+                &:last-child {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &:hover {
+            .button-icon {
+                &__svg {
+                    fill: var(--content-primary);
+                }
+            }
+        }
+    }
+
+    &:disabled {
+        background-color: var(--background-black-disabled);
+
+        .button-icon {
+            &__svg {
+                &:first-child {
+                    fill: var(--content-placeholder);
+                }
+
+                &:last-child {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+
+.button-icon.secondary {
+    &.active {
+        .button-icon {
+            &__svg {
+                fill: var(--content-active);
+
+                &:last-child {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}

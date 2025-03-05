@@ -1,0 +1,37 @@
+.account-settings {
+    padding-bottom: 247px;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 64px;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 40px;
+    }
+}
+
+//**************************************//
+//************  576 *******************//
+//**************************************//
+@media (max-width: 576px) {
+    .account-settings {
+        padding-bottom: 82px;
+
+        &__list {
+            margin-bottom: 38px;
+        }
+    }
+}
+
+//**************************************//
+//************  376 *******************//
+//**************************************//
+@media (max-width: 376px) {
+    .account-settings {
+        &__btn {
+            width: 100%;
+        }
+    }
+}

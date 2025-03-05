@@ -1,0 +1,18 @@
+.place {
+    display: flex;
+    width: 62px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--content-primary);
+    border-radius: 50px;
+    font-family: var(--font-bold);
+    font-weight: 700;
+    color: var(--background-brand-active);
+    font-size: 24px;
+    line-height: 32px;
+
+    &__text {
+        display: block;
+    }
+}

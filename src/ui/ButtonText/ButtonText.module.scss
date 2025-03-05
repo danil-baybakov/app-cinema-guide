@@ -1,0 +1,85 @@
+.button-text {
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+    min-height: 56px;
+    padding: 16px 48px;
+
+    font-family: "Play-Bold", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--content-primary);
+    background-color: var(--background-brand-active);
+    border-radius: 28px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &__loader {
+        position: absolute;
+        right: 12px;
+    }
+
+    &__content {
+        display: block;
+    }
+
+    &:focus {
+        background-color: var(--background-barnd-hovered);
+    }
+
+    &:hover {
+        background-color: var(--background-barnd-hovered);
+    }
+
+    &:active {
+        background-color: var(--background-barnd-hovered);
+    }
+
+    &:disabled {
+        background-color: var(--background-brand-disabled);
+    }
+}
+
+.button-text.secondary {
+    background-color: var(--btn-text-background-secondary);
+
+    &:focus {
+        background-color: var(--content-primary);
+        color: #000000;
+    }
+
+    &:hover {
+        background-color: var(--content-primary);
+        color: #000000;
+    }
+
+    &:active {
+        background-color: var(--content-primary);
+        color: #000000;
+    }
+
+    &:disabled {
+        background-color: var(--background-black-disabled);
+        color: var(--content-placeholder);
+    }
+}
+
+//**************************************//
+//************  576 *******************//
+//**************************************//
+@media (max-width: 576px) {
+    .button-text {
+        padding: 16px 40px;
+    }
+}

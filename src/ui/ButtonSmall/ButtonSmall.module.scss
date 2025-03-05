@@ -1,0 +1,50 @@
+.button-small {
+    display: block;
+    line-height: 0;
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+
+    &__svg {
+        display: block;
+        width: 24px;
+        height: 24px;
+        line-height: 0;
+        fill: var(--content-primary);
+        transition: fill 0.3s ease-in-out;
+    }
+
+    &:focus {
+        .button-small__svg {
+            fill: var(--content-secondary);
+        }
+    }
+
+    &:hover {
+        .button-small__svg {
+            fill: var(--content-secondary);
+        }
+    }
+
+    &:active {
+        .button-small__svg {
+            fill: var(--content-secondary);
+        }
+    }
+
+    &.active {
+        .button-small__svg {
+            fill: var(--content-secondary);
+        }
+    }
+
+    &.hide {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
