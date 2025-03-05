@@ -4,6 +4,12 @@
 
 ### Запуск приложения:
 
+-   клонирование репозитория:
+
+    ```bush
+    	git clone https://github.com/danil-baybakov/app-cinema-guide.git
+    ```
+
 -   установка зависимостей:
 
     ```bush
